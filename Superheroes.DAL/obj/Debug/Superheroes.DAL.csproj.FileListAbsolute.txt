@@ -1,0 +1,7 @@
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\bin\Debug\Superheroes.DAL.dll
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\bin\Debug\Superheroes.DAL.pdb
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\obj\Debug\Superheroes.DAL.csprojResolveAssemblyReference.cache
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\obj\Debug\Superheroes.DAL.dll
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\obj\Debug\Superheroes.DAL.pdb
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\bin\Debug\Superheroes.Domain.dll
+C:\Users\crusader\Documents\Visual Studio 2015\Projects\Superheroes\Superheroes.DAL\bin\Debug\Superheroes.Domain.pdb

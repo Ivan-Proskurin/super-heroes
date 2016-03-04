@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNet.Identity
+<div class="row">
+@if (Request.IsAuthenticated)
+{
+    Html.RenderAction("List", "Superheroes");
+    Html.RenderAction("NewDialog", "Superheroes");
+}
+else
+{
+    <div class="col-md-4" style="margin-top:30px">
+        <p>
+            Войдите или зарегистрируйтесь, чтобы увидеть список супергероев.
+        </p>
+    </div>
+}
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        function OpenNewSuperhero() {
+            $("#new-superhero-form").dialog({
+                    width: 'auto', height: 'auto', modal: true, title: "Новый супергерой",
+                }
+            );
+        }
+        function CloseNewSuperhero() {
+            $("#new-superhero-form").dialog("close");
+        }
+    </script>
+}

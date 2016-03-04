@@ -1,0 +1,21 @@
+﻿@using Superheroes.Web.ViewModels
+@model ContactViewModel
+@{
+    AppInfoViewModel appInfo = ViewBag.AppInfo;
+}
+<div class="jumbotron">
+    <h2>@appInfo.ApplicationTitle</h2>
+    <p class="lead">Контакты разработчика</p>
+</div>
+
+<h3>@Model.DevName</h3>
+<address>
+    @Model.Address1<br />
+    @Model.Address2<br />
+    <abbr title="Phone">Тел:</abbr>
+    @Model.Phone
+</address>
+
+<address>
+    <strong>Email:</strong>   <a href="mailto:Support@example.com">@Model.EMail</a><br />
+</address>

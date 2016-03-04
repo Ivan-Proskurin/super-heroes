@@ -1,0 +1,65 @@
+﻿@using Superheroes.Web.ViewModels
+@model NewSuperheroViewModel
+
+@{ 
+    Layout = null;
+}
+
+<div style="margin: 10px;display:none" id="new-superhero-form">
+    <div class="col-md-8" style="width:100%">
+        <section id="heroForm">
+            @using (Html.BeginForm("New", "Superheroes", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post,
+                new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <table>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(m => m.Details, new { @class = "col-md-2 control-label" })
+                        </td>
+                        <td>
+                            @Html.TextAreaFor(m => m.Details, new { @class = "form-control", rows = 5 })
+                            @Html.ValidationMessageFor(m => m.Details, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(m => m.HeroLevel, new { @class = "col-md-2 control-label" })
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.HeroLevel, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.HeroLevel, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(m => m.PictureFile, new { @class = "col-md-2 control-label" })
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(m => m.PictureFile, new { type = "file" })
+                            @Html.ValidationMessageFor(m => m.PictureFile, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div style="margin-top: 35px" align="right">
+                                <input type="submit" value="Сохранить" class="btn btn-danger" />
+                                <input type="button" value="Отмена" class="btn btn-default" onclick="CloseNewSuperhero();" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </section>
+    </div>
+</div>
+

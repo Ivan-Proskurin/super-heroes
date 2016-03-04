@@ -1,0 +1,97 @@
+﻿@using Superheroes.Web.ViewModels
+@model SuperheroViewModel
+
+@if (Model != null)
+{
+    <table class="hero-details">
+        <tr>
+            <td rowspan="3" width="250">
+                <img class="hero-avatar-details" src="@Model.ImageUrl" />
+            </td>
+            <td>
+                <h2>@Model.Name</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Model.Details
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4>Уровень героя: @Model.Level</h4>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right">
+                <a href="@Model.AddTalentUrl" role="button" class="btn btn-default">Добавить способность</a>
+                <a href="@Model.EditUrl" role="button" class="btn btn-default">Изменить</a>
+                <a id="deleteHero" class="btn btn-default" data-toggle="modal" data-target="#confirm-delete">Удалить</a>
+            </td>
+        </tr>
+    </table>
+
+    <hr/>
+    <div class="talent-list">
+
+        @if (Model.Talents.Count > 0)
+        {
+            foreach (TalentViewModel talent in Model.Talents)
+            {
+                <div class="list-row">
+                    <table>
+                        <tr>
+                            <td width="10%">
+                                <a href="@talent.DetailsUrl">
+                                    <img class="talent-img-min" src="@talent.ImageUrl" />
+                                </a>
+                            </td>
+                            <td>
+                                <h4>
+                                    <a href="@talent.DetailsUrl">@talent.Name</a>
+                                </h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                @talent.Details
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="list-row">
+                У супергероя еще нет ни одной суперспособности (и даже просто способности).<br/>
+                Нажмите "Добавить суперспособность" для ее создания.
+            </div>
+        }
+    </div>
+
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Подтверждение действия
+                </div>
+                <div class="modal-body">
+                    Вы действительно хотите удалить супергероя &quot;@Model.Name&quot;?
+                </div>
+                <div class="modal-footer">
+                    <a href="@Model.DeleteUrl" class="btn btn-danger btn-ok">Удалить</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h3 class="hero-details">
+        Супергерой с указанным идентификатором не найден!
+    </h3>
+}

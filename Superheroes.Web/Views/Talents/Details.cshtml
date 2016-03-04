@@ -1,0 +1,68 @@
+﻿@using Superheroes.Web.ViewModels
+@model TalentViewModel
+
+@if (Model != null)
+{
+    <table border="0" style="width:100%">
+        <tr>
+            <td>
+                <h3>Супергерой "@Model.HeroName"</h3>
+            </td>
+            <td>
+                <div align="right" style="margin-top:30px">
+                    <a href="@Model.BackToHeroUrl" class="btn btn-default">Вернуться к герою</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table border="0" class="talent-details">
+        <tr>
+            <td rowspan="3" width="150">
+                <img class="talent-img-details" src="@Model.ImageUrl" />
+            </td>
+            <td>
+                <h2>
+                    @Model.Name
+                </h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Model.Details
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div align="right" style="margin-top:20px">
+                    <a href="@Model.EditUrl" role="button" class="btn btn-default">Изменить</a>
+                    <a id="deleteTalent" class="btn btn-default" data-toggle="modal" data-target="#confirm-delete">Удалить</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Подтверждение действия
+                </div>
+                <div class="modal-body">
+                    Вы действительно хотите удалить способность &quot;@Model.Name&quot;?
+                </div>
+                <div class="modal-footer">
+                    <a href="@Model.DeleteUrl" class="btn btn-danger btn-ok">Удалить</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h3 class="hero-details">
+        Способность супергероя с указанным идентификатором не найдена!
+    </h3>
+}

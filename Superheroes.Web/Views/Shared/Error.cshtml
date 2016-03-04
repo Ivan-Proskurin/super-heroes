@@ -1,0 +1,17 @@
+﻿@model HandleErrorInfo
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Ошибка.</h1>
+        <h2>Во время обработки запроса возникла ошибка.</h2>
+    </hgroup>
+    Error Message :@Model.Exception.Message<br />
+    Controller: @Model.ControllerName<br />
+    Action: @Model.ActionName
+</body>
+</html>

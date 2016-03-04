@@ -1,0 +1,23 @@
+﻿@model Superheroes.Web.ViewModels.AboutViewModel
+@using Superheroes.Web.ViewModels
+@{ 
+    AppInfoViewModel appInfo = ViewBag.AppInfo;
+}
+<div class="jumbotron">
+    <h2>@appInfo.ApplicationTitle</h2>
+    <p class="lead">@appInfo.ApplicationDetails</p>
+</div>
+
+<h3>
+    Структура модулей:
+</h3>
+<hr />
+<ul>
+    @foreach (var moduleInfo in Model.Modules)
+    {
+        <li>
+            <h3>@moduleInfo.Name</h3>
+            <p>@moduleInfo.Details</p>
+        </li>
+    }
+</ul>

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheroes.Web", "Superheroes.Web\Superheroes.Web.csproj", "{2604E62B-4A06-4564-912B-E550896210FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Layer", "Data Access Layer", "{5D53D20C-13D8-4EE4-882E-D50A6677DD86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{56510324-51A2-437C-B275-5951DB942BD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Application", "Web Application", "{99F3ECF6-6A07-4913-935E-BB311957F5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheroes.Domain", "Superheroes.Domain\Superheroes.Domain.csproj", "{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheroes.DA", "Superheroes.DAL\Superheroes.DA.csproj", "{CD85FF2E-7A06-4978-805B-986C449F872D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheroes.DA.EF", "Superheroes.DAL.EF\Superheroes.DA.EF.csproj", "{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superheroes.Logic", "Superheroes.Logic\Superheroes.Logic.csproj", "{B6DABA61-7ADB-4E75-BE98-65959217DDEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2604E62B-4A06-4564-912B-E550896210FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2604E62B-4A06-4564-912B-E550896210FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2604E62B-4A06-4564-912B-E550896210FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2604E62B-4A06-4564-912B-E550896210FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD85FF2E-7A06-4978-805B-986C449F872D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD85FF2E-7A06-4978-805B-986C449F872D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD85FF2E-7A06-4978-805B-986C449F872D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD85FF2E-7A06-4978-805B-986C449F872D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DABA61-7ADB-4E75-BE98-65959217DDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DABA61-7ADB-4E75-BE98-65959217DDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DABA61-7ADB-4E75-BE98-65959217DDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DABA61-7ADB-4E75-BE98-65959217DDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2604E62B-4A06-4564-912B-E550896210FE} = {99F3ECF6-6A07-4913-935E-BB311957F5EF}
+		{BA77FA9A-D3C8-418E-9409-3ABF1FFE8EE0} = {56510324-51A2-437C-B275-5951DB942BD3}
+		{CD85FF2E-7A06-4978-805B-986C449F872D} = {5D53D20C-13D8-4EE4-882E-D50A6677DD86}
+		{BD000BA7-FBDF-4396-A4A0-3BD5394B4FA5} = {5D53D20C-13D8-4EE4-882E-D50A6677DD86}
+		{B6DABA61-7ADB-4E75-BE98-65959217DDEC} = {56510324-51A2-437C-B275-5951DB942BD3}
+	EndGlobalSection
+EndGlobal

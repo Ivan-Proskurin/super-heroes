@@ -1,0 +1,49 @@
+﻿@using Superheroes.Web.ViewModels
+@model SuperheroesListViewModel
+
+@{
+    Layout = null;
+}
+
+<table border="0" style="width:100%">
+    <tr>
+        <td><h2>Список супергероев</h2></td>
+        <td align="right">
+            <button type="button" class="btn btn-primary" role="button" style="margin-top:20px" onclick="OpenNewSuperhero();">Добавить супергероя</button>
+        </td>
+    </tr>
+</table>
+<hr />
+
+@if (Model.Superheroes.Count > 0)
+{
+    foreach (SuperheroViewModel hero in Model.Superheroes)
+    {
+        <div class="list-row">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                        <a href="@hero.DetailsUrl">
+                            <img class="hero-avatar-min" src="@hero.ImageUrl" />
+                        </a><br />
+                    </td>
+                    <td>
+                        <a href="@hero.DetailsUrl" class="btn btn-lg" style="font-size: 22px">@hero.Name</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @hero.Details
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+}
+else
+{
+    <div class="list-row">
+        Библиотека пуста и в ней нет ни одного героя.<br />
+        Создайте своего героя, нажав на "Добавить супергероя"!
+    </div>
+}

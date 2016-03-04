@@ -1,0 +1,49 @@
+﻿@using Superheroes.Web.ViewModels
+@model NewTalentViewModel
+
+<h2>Новая суперспособность</h2>
+<hr />
+<div class="row">
+    <div class="col-md-8" style="width:100%">
+        <section id="talentForm">
+            @using (Html.BeginForm("New", "Talents", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post,
+                new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Details, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(m => m.Details, new { @class = "form-control", rows = 5 })
+                        @Html.ValidationMessageFor(m => m.Details, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PictureFile, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.PictureFile, new { type = "file" })
+                        @Html.ValidationMessageFor(m => m.PictureFile, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <input type="hidden" name="SuperheroId" value="@Model.SuperheroId"/>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10" style="margin-top:50px">
+                        <input type="submit" value="Сохранить" class="btn btn-danger" />
+                        <a href='@Url.Action("Details", "Superheroes", new { id = Model.SuperheroId })' type="submit" value="Отмена" class="btn btn-default">Отмена</a>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
