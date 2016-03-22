@@ -64,7 +64,7 @@ namespace Superheroes.Web.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Load(new SuperheroesNinjectModule());
-            //kernel.Bind<ISuperheroRepository>().To<SuperheroRepositoryEF>();
+            //kernel.Bind<ISuperheroRepository>().To<SuperheroRepository>();
         }        
     }
 }

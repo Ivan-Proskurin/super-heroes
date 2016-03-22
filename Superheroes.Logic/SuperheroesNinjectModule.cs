@@ -13,9 +13,9 @@ namespace Superheroes.Logic
     {
         public override void Load()
         {
-            this.Bind<ISuperheroRepository>().To<SuperheroRepositoryEF>();
-            this.Bind<ITalentRepository>().To<TalentRepositoryEF>();
-            this.Bind<IFileRepository>().To<FileRepositoryEF>();
+            this.Bind<ISuperheroRepository>().To<SuperheroRepository>();
+            this.Bind<ITalentRepository>().To<TalentRepository>();
+            this.Bind<IFileRepository>().To<FileRepository>();
             this.Bind<SuperheroesBusinessLogic>().ToSelf();
         }
     }

@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Superheroes.DA.EF
 {
-    public class SuperheroRepositoryEF : ISuperheroRepository
+    public class SuperheroRepository : ISuperheroRepository
     {
         public Superhero Get(int id)
         {

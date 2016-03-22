@@ -8,7 +8,7 @@ using Superheroes.Domain;
 
 namespace Superheroes.DA.EF
 {
-    public class TalentRepositoryEF : ITalentRepository
+    public class TalentRepository : ITalentRepository
     {
         public void Add(SuperheroTalent talent)
         {

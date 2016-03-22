@@ -7,7 +7,7 @@ using Superheroes.Domain;
 
 namespace Superheroes.DA.EF
 {
-    public class FileRepositoryEF : IFileRepository
+    public class FileRepository : IFileRepository
     {
         public DbFile Add(DbFile file)
         {
